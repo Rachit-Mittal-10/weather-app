@@ -1,3 +1,4 @@
 import getWeather from "./fetchWeather";
 
-getWeather('Delhi');
+let returnedWeatherData = await getWeather('Delhi');
+console.log(returnedWeatherData);
