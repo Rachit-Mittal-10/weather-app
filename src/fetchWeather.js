@@ -1,7 +1,7 @@
 /*
 getWeather is the function that is responsible for fetching the Weather Detail for a location from API(openWeathermap.org)
 */
-let getWeather = function Weather(){
+let getWeather = function(){
     const API_KEY = "e3ff4bc0e67ef796cf6f736a27e81558";
     return async function fetchWeather(location){
         try{
