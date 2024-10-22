@@ -1,6 +1,7 @@
-import fetchWeather from "./fetchWeather";
-import displayData from "./displayData.js";
+import fetchWeather from "./js/fetchWeather.js";
+import displayData from "./js/displayData.js";
 
-let returnedWeatherData = await fetchWeather('Bengaluru');
-console.log(returnedWeatherData);
-displayData(returnedWeatherData);
+const body = document.getElementsByTagName("body")[0];
+let returnedWeatherData = await fetchWeather('Delhi');
+const contentBox = displayData(returnedWeatherData);
+body.appendChild(contentBox);
