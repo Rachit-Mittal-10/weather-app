@@ -1,17 +1,18 @@
-.failedBox,
-.successBox{
+.failed-box,
+.success-box{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 0.5rem;
 
 }
-.failedBox p,
-.successBox p{
+.failed-box p,
+.success-box p{
     font-weight: bold;
 }
 
-.failedBox p+p,
-.successBox p+p{
-    margin-top: 20px;
+.failed-box p+p,
+.success-box p+p{
+    margin-top: 1rem;
 }
