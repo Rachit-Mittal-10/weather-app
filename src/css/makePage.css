@@ -1,0 +1,15 @@
+#app-div{
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+}
+
+#app-div div+div{
+    margin-top: 1em;
+}
+
+#app-div div{
+    padding: 0em 0.5em 0em 0.5em;
+}
