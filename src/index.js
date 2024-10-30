@@ -4,10 +4,15 @@ import "./css/general.css";
 import makePage from "./js/makePage.js";
 
 const body = document.getElementsByTagName("body")[0];
-
+// generate the page and add it to body
 const PAGE = makePage();
-let returnedWeatherData = await fetchWeather('Delhi');
-const contentBox = displayData(returnedWeatherData);
 body.appendChild(PAGE);
-const resultDiv = document.getElementById("result-div");
-resultDiv.appendChild(contentBox);
+// adding the event listener
+const locationSubmitButton = document.getElementById("location-submit-button");
+locationSubmitButton.addEventListener("click", async ()=>{
+    const formEntries = Object.fromEntries(new FormData(document.getElementById("location-form")));
+    let returnedWeatherData = await fetchWeather(formEntries.location);
+    const contentBox = displayData(returnedWeatherData);
+    const resultDiv = document.getElementById("result-div");
+    resultDiv.appendChild(contentBox);
+});
