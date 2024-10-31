@@ -26,9 +26,6 @@ export default function makePage(){
     const locationSubmitButton = document.createElement("button");
     locationSubmitButton.innerText = "SUBMIT";
     locationSubmitButton.id = "location-submit-button";
-    locationSubmitButton.addEventListener("submit",(event)=>{
-        event.preventDefault();
-    });
     locationForm.appendChild(locationLabel);
     locationForm.appendChild(locationInput);
     locationForm.appendChild(locationSubmitButton);

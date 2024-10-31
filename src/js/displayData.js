@@ -53,7 +53,7 @@ let displaySucessfulData = function(data){
     const temperatureBox = document.createElement("p");
     temperatureBox.className = "temp-Box";
     let celsiusTemp = convertKtoC(data.list[0].main.temp);
-    temperatureBox.innerText = `${celsiusTemp}`;
+    temperatureBox.innerText = `${celsiusTemp} \u00B0C`;
     successBox.appendChild(cityBox);
     successBox.appendChild(countryBox);
     successBox.appendChild(temperatureBox);
